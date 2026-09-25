@@ -1,0 +1,222 @@
+/* ===== Cores da Reconectando (tiradas da capa do manual do roteador) ===== */
+:root {
+    --magenta: #e43ae0;
+    --rosa: #f9a0f5;
+    --roxo-escuro: #1e0a3c;
+    --fundo: #f6f3f0;
+    --branco: #ffffff;
+    --cinza: #6b6478;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--roxo-escuro);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ===== Topo ===== */
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--roxo-escuro);
+}
+
+.marca {
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: var(--magenta);
+    text-decoration: none;
+}
+
+.idioma {
+    color: var(--branco);
+    font-size: 0.9rem;
+}
+
+/* ===== Destaque (parte de cima da página inicial) ===== */
+.destaque {
+    background: var(--magenta);
+    padding: 48px 24px 56px;
+}
+
+.destaque > * {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.destaque-pequeno {
+    font-weight: 600;
+    margin: 0;
+}
+
+.destaque h1 {
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-weight: normal;
+    font-size: clamp(3rem, 10vw, 6rem);
+    line-height: 0.95;
+    margin: 8px auto 12px;
+    color: #000;
+}
+
+.destaque h1 span {
+    color: var(--branco);
+}
+
+.destaque-en {
+    color: var(--branco);
+    font-size: 1.3rem;
+    margin-top: 0;
+}
+
+.destaque-texto {
+    font-size: 1.05rem;
+}
+
+/* ===== Catálogo de manuais ===== */
+.catalogo {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 24px;
+}
+
+.catalogo h2 {
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-weight: normal;
+    font-size: 2.5rem;
+    margin: 0 0 24px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: var(--branco);
+    border: 3px solid var(--roxo-escuro);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.capa {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    background: var(--magenta);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.capa img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.capa-manual {
+    font-weight: 600;
+    margin: 0;
+}
+
+.capa-titulo {
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-size: 3rem;
+    line-height: 0.95;
+    color: #000;
+    margin: 4px 0 8px;
+    text-transform: uppercase;
+}
+
+.capa-en {
+    color: var(--branco);
+    margin: 0;
+}
+
+.selo {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--roxo-escuro);
+    color: var(--branco);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 999px;
+}
+
+.card-em-breve .capa {
+    background: var(--rosa);
+}
+
+.card-corpo {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-corpo h3 {
+    margin: 0 0 8px;
+    font-size: 1.1rem;
+}
+
+.card-corpo p {
+    margin: 0 0 16px;
+    color: var(--cinza);
+    flex: 1;
+}
+
+/* ===== Botões ===== */
+.botao {
+    display: inline-block;
+    text-align: center;
+    background: var(--roxo-escuro);
+    color: var(--branco);
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+.botao:hover {
+    background: var(--magenta);
+    color: #000;
+}
+
+.botao-desativado,
+.botao-desativado:hover {
+    background: #ddd6e3;
+    color: var(--cinza);
+    cursor: default;
+}
+
+/* ===== Rodapé ===== */
+.rodape {
+    background: var(--roxo-escuro);
+    color: var(--rosa);
+    text-align: center;
+    padding: 24px;
+    font-size: 0.9rem;
+}
+
+.rodape p {
+    margin: 4px 0;
+}
